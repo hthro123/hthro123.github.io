@@ -22,9 +22,10 @@
       <i class="db2" tabindex="1"></i>
       <a class="dropbtn">Navigation</a>
        <div class="dropdown-content">
-          <a href="index.html">Home</a>
-          <a href="Services.html">Services</a>
-          <a href="Contact.html">Contact Us</a>
+        <a href="index.html">Home</a>
+        <a href="Services.html">Services</a>
+        <a href="Contact.html">Contact Us</a>
+        <a href="about.html">About Us</a>
        </div>
     </div>
     
@@ -75,17 +76,224 @@
         
         
         
-        <div class="about-me">
-          <div class="about-me-text">
-            <h2>About Thros Auto Service</h2>
-            <p> Located at 3120 Lumina Pkwy St Charles, MO 63303 </p>
+        <div class="section">
+            <h2>What We Can Do For You</h2>
+            <p>At our auto repair shop, we provide top-quality services to customers in St. Charles, St. Peters, and Orchard Farm in Missouri.<br> Our experienced mechanics can handle all of your auto repair needs, from routine maintenance to major repairs. We use the latest tools and technology to diagnose and fix any issues with your vehicle quickly and efficiently.<br> Trust us to keep your car running smoothly and safely on the road.</p>
+            <div class="buttons">
+              <a href="tel:+16365788273" class="button">Call Us</a>
+              <a href="Contact.html" class="button">Contact Us</a>
+            </div>
           </div>
-          <img src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80" alt="me">
-        </div>
-      </main>
- 
- 
-    </body>
+          
+
+
+          <style>
+    .section {
+  text-align: center;
+  padding: 40px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.section h2 {
+  font-size: 36px;
+}
+
+.section p {
+  font-size: 24px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-block;
+  padding: 20px 40px;
+  margin: 20px;
+  background-color: #5edaf0;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 24px;
+}
+
+@media (max-width: 480px) {
+  .buttons {
+    flex-direction: column;
+  }
+  
+  .section h2 {
+    font-size: 24px;
+  }
+
+  .section p {
+    font-size: 13px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 18px;
+  }
+}
+</style>
+
+
+
+
+<div class="pictures">
+    <div class="picture">
+      <img src="HomeSpaceKeeper.jpg" alt="Brakes">
+      <p>Brakes</p>
+    </div>
+    <div class="picture">
+      <img src="HomeSpaceKeeper.jpg" alt="Auto Repair">
+      <p>Auto Repair</p>
+    </div>
+    <div class="picture">
+      <img src="HomeSpaceKeeper.jpg" alt="Tires">
+      <p>Tires</p>
+    </div>
+  </div>
+  
+  <style>
+   .pictures {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.picture {
+  margin: 10px;
+  text-align: center;
+}
+
+.picture p {
+  color: #5edaf0;
+  font-size: 24px;
+}
+
+.picture img {
+  width: 400px;
+  height: auto;
+}
+
+@media (max-width: 480px) {
+  .pictures {
+    flex-direction: column;
+  }
+
+  .picture {
+    margin: 1px;
+
+  }
+
+  .picture img {
+    width: 100%;
+    height: auto;
+  }
+}
+  </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+.gallery {
+    display:flex; 
+    justify-content:center; 
+    margin-top:40px
+}
+.gallery img {
+    width:100%
+}
+
+/* Style the gallery container */
+.gallery-container {
+  position: relative;
+  margin: 70px 35px 15px 35px;
+}
+
+/* Style the gallery image */
+.gallery-image {
+  display: none;
+  width: 40%;
+}
+
+/* Style the gallery controls */
+.gallery-prev, .gallery-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.gallery-next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.gallery-prev:hover, .gallery-next:hover {
+    background-color:rgba(0,0,0,0.8)
+}
+
+</style>
+
+<div class="gallery-container">
+    <!-- Add your gallery images here -->
+    <img class="gallery-image" src="HomeSpaceKeeper.jpg" style="width:100%">
+    <img class="gallery-image" src="HomeSpaceKeeper.jpg" style="width:100%">
+    <img class="gallery-image" src="HomeSpaceKeeper.jpg" style="width:100%">
+  
+    <!-- Add gallery controls -->
+    <a class="gallery-prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="gallery-next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <script>
+    var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+      showSlides(slideIndex += n);
+  }
+  
+  function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("gallery-image");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      slides[slideIndex-1].style.display = "block";
+  }
+  </script>
+
+
+
+
 
 
 
@@ -97,9 +305,10 @@
     <div class="col">
     <h1>Thros Auto Service</h1>
     <ul>
-      <li><a href="index.html" class="menu">Home</a></li>
-      <li><a href="Services.html" class="menu">Services</a></li>
-      <li><a href="Contact.html" class="menu">Contact</a></li>
+      <li><a href="index.html" style="color:rgb(25, 14, 237) ;" class="menu">Home</a></li>
+        <li><a href="Services.html" style="color:rgb(25, 14, 237) ;" class="menu">Services</a></li>
+        <li><a href="Contact.html" style="color:rgb(25, 14, 237) ;" class="menu">Contact</a></li>
+        <li><a href="about.html" style="color:rgb(25, 14, 237) ;" class="menu">About Us</a></li>
       
     </ul>
   </div>
