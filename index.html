@@ -431,7 +431,28 @@
 
 
 
+<a class="sticky-button" href="6365788273">Phone</a>
+<style>
+.sticky-button {
+  display: none; /* hide the button by default */
+}
 
+@media only screen and (max-width: 480px) {
+  .sticky-button {
+    display: block; /* show the button on small screens */
+    width: 17%;
+    position: fixed;
+    bottom: 50px;
+    left: 85%; /* move the button to the right */
+    transform: translateX(-50%); /* center the button horizontally */
+    background: rgba(12, 12, 12, 0.5); /* white with 50% opacity */
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 8px;
+  }
+}
 
- 
+</style>
 </html>
